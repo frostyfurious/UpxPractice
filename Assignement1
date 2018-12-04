@@ -27,3 +27,33 @@ with a “_”
 str_input = 'Hey how are you doing. I am doing great'
 str_input = str_input[:10] + '_' + str_input[-10:]
 print(str_input)
+
+'''
+5. string1 = “Hotelspace”
+string2=”Facilities”
+I want you to swap the first three letters and last three letters of both the strings and print
+the output by separating them with a “@
+'''
+
+string1 = 'Hotelspace'
+string2 = 'Facilities'
+sc = 3 #no of letters to be swapped
+string1 = string1[-sc:] + string1[sc : -sc] + string1[:sc]
+string2 = string2[-sc:] + string2[sc : -sc] + string2[:sc]
+
+print(string1 + ' @ ' + string2)
+
+'''
+6. strr = 'Hello World'
+How do you extract the string ‘Worl’ from the above string using negative index?
+'''
+
+strr = 'Hello World'
+str_wrd = 'Worl'
+#using +ve indexing
+    #strr = strr[strr.find(str_wrd) : strr.find(str_wrd) + len(str_wrd)] 
+#using -ve indexing    
+strr = strr[-strr.find(str_wrd) +1 : -strr.find(str_wrd) + len(str_wrd) + 1]
+
+print(strr);
+
