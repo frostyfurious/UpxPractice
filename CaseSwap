@@ -1,0 +1,12 @@
+eg = 'I Love Pyton'
+egn = ''
+
+strlen = len(eg)
+for j in range(strlen):
+    if eg[j:j+1] == eg[j:j+1].lower():
+        egn += eg[j:j+1].upper()
+    elif eg[j:j+1] == eg[j:j+1].upper():
+            egn += eg[j:j+1].lower()
+        
+    j = j + 1
+print(egn)
