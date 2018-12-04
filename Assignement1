@@ -23,3 +23,7 @@ print(str_ex1)
 Get the first 10 characters and the last 10 characters of the above the string and join them
 with a “_” 
 '''
+
+str_input = 'Hey how are you doing. I am doing great'
+str_input = str_input[:10] + '_' + str_input[-10:]
+print(str_input)
