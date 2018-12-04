@@ -1,0 +1,25 @@
+
+'''
+3) str_ex = “I Love Pyton”
+How do you swap the cases of letters in the above input string?
+'''
+
+str_ex = 'I Love Pyton'
+str_ex1 = ''
+
+strlen = len(str_ex)
+for j in range(strlen):
+    if str_ex[j:j+1] == str_ex[j:j+1].lower():
+        str_ex1 += str_ex[j:j+1].upper()
+    elif str_ex[j:j+1] == str_ex[j:j+1].upper():
+            str_ex1 += str_ex[j:j+1].lower()
+        
+    j = j + 1
+print(str_ex1)
+
+
+'''
+4) str_input = “Hey how are you doing. I am doing great”
+Get the first 10 characters and the last 10 characters of the above the string and join them
+with a “_” 
+'''
