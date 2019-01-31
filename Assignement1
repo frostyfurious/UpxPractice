@@ -46,3 +46,13 @@ print(string1[-3:] + string1[3:-3] + string1[:3] + " @ " + string2[-3:] + string
 print(strr[-5:-1]);
 
 #7. Reverse the string “5+6*3-45”. The output should be “45-3*6+5”
+
+#10.var3 = “abcdefgh” I want you to transform the above string to “a2c4e8g10”
+var3="abcdefgh"
+list1=list(var3)
+list1[1]=str(2)
+list1[3]=str(4)
+list1[5]=str(8)
+list1[7]=str(10)
+print (''.join(list1))
+
