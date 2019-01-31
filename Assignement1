@@ -1,59 +1,48 @@
+#1) I want to print the below string as it is. How do I do that?
+#	“Apples are better than \n Oranges”
 
-'''
-3) str_ex = “I Love Pyton”
-How do you swap the cases of letters in the above input string?
-'''
+	print(“Apples are better than \\n Oranges”);
 
-str_ex = 'I Love Pyton'
-str_ex1 = ''
+#2) string_ex = “I love python because it is so easy to use it and also it is used by many other IT
+#companies”
+#I want you to split the above string on the separator “it”. How will you do it?
 
-strlen = len(str_ex)
-for j in range(strlen):
-    if str_ex[j:j+1] == str_ex[j:j+1].lower():
-        str_ex1 += str_ex[j:j+1].upper()
-    elif str_ex[j:j+1] == str_ex[j:j+1].upper():
-            str_ex1 += str_ex[j:j+1].lower()
-        
-    j = j + 1
-print(str_ex1)
+	string_ex = "I love python because it is so easy to use it and also it is used by many other IT companies";
+	print(string_ex.split("it"));
+	
+#3)	str_ex = “I Love Pyton”
+#	How do you swap the cases of letters in the above input string?
 
+	str_ex = "I Love Pyton"
+	#CODE1 : 
+	str_ex.swapcase();
+	temp = ""
+	for x in str_ex:
+		if x.islower() == True:
+			temp += x.upper();
+		else:
+			if x.isupper() == True:
+				temp += x.lower();
+			else:
+				temp += x
 
-'''
-4) str_input = “Hey how are you doing. I am doing great”
-Get the first 10 characters and the last 10 characters of the above the string and join them
-with a “_” 
-'''
+	str_ex = temp
+	print(str_ex);
 
-str_input = 'Hey how are you doing. I am doing great'
-str_input = str_input[:10] + '_' + str_input[-10:]
-print(str_input)
+# 4)str_input = “Hey how are you doing. I am doing great”
+# Get the first 10 characters and the last 10 characters of the above the string and join them with a “_”
+	str_input = “Hey how are you doing. I am doing great”;
+	print(str_input[:10] + "_" + str_input[-10:]);
+	
+	
+#5) string1 = “Hotelspace”
+#	string2=”Facilities”
+#	I want you to swap the first three letters and last three letters of both the strings and print
+#	the output by separating them with a “@”
+print(string1[-3:] + string1[3:-3] + string1[:3] + " @ " + string2[-3:] + string2[3:-3] + string2[:3])
 
-'''
-5. string1 = “Hotelspace”
-string2=”Facilities”
-I want you to swap the first three letters and last three letters of both the strings and print
-the output by separating them with a “@
-'''
+#6. strr = 'Hello World'
+#How do you extract the string ‘Worl’ from the above string using negative index?
+print(strr[-5:-1]);
 
-string1 = 'Hotelspace'
-string2 = 'Facilities'
-sc = 3 #no of letters to be swapped
-string1 = string1[-sc:] + string1[sc : -sc] + string1[:sc]
-string2 = string2[-sc:] + string2[sc : -sc] + string2[:sc]
-
-print(string1 + ' @ ' + string2)
-
-'''
-6. strr = 'Hello World'
-How do you extract the string ‘Worl’ from the above string using negative index?
-'''
-
-strr = 'Hello World'
-str_wrd = 'Worl'
-#using +ve indexing
-    #strr = strr[strr.find(str_wrd) : strr.find(str_wrd) + len(str_wrd)] 
-#using -ve indexing    
-strr = strr[-strr.find(str_wrd) +1 : -strr.find(str_wrd) + len(str_wrd) + 1]
-
-print(strr);
-
+#7. Reverse the string “5+6*3-45”. The output should be “45-3*6+5”
