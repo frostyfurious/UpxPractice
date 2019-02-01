@@ -46,6 +46,16 @@ print(string1[-3:] + string1[3:-3] + string1[:3] + " @ " + string2[-3:] + string
 print(strr[-5:-1]);
 
 #7. Reverse the string “5+6*3-45”. The output should be “45-3*6+5”
+str_ = '5+6*3-45'
+charl = ['+', '*', '-'] 
+op = []
+
+for x  in reversed(charl):
+    op.append(str_.split(x)[1])
+    op += x
+    str_ = str_.split(x)[0]
+op.append(str_)
+print(''.join(op))
 
 #10.var3 = “abcdefgh” I want you to transform the above string to “a2c4e8g10”
 var3="abcdefgh"
