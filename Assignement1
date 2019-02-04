@@ -57,6 +57,30 @@ for x  in reversed(charl):
 op.append(str_)
 print(''.join(op))
 
+#8. str_s = “India is a great country with a lot of heritage” str_x = “South Africa is a great country with a lot of freedom” 
+# I want you to remove the common words appearing in the above strings and display the leftover words as one single string.
+
+str_s = "India is a great country with a lot of heritage"
+str_x = "South Africa is a great country with a lot of freedom" 
+str_s = str_s.split(' ')
+str_x = str_x.split(' ')
+t = []
+
+for s in str_s:
+    try:
+        pos = str_x.index(s)
+    except ValueError:
+        t.append(s)
+
+for x in str_x:
+    try:
+        pos = str_s.index(x)
+    except ValueError:
+        t.append(x)
+t = ' '.join(t)
+print(t)
+ 
+
 #10.var3 = “abcdefgh” I want you to transform the above string to “a2c4e8g10”
 var3="abcdefgh"
 list1=list(var3)
